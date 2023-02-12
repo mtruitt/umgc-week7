@@ -40,8 +40,6 @@ public class Genre extends Movies {
         }
     }
 
-
-
     public Genre(String title, String year, String rating, String runtime, String actors, String genre) {
         super(title, year, rating, runtime, actors);
         Genre.genre = genre;
@@ -64,5 +62,15 @@ public class Genre extends Movies {
 
     public void setType(Type type) {
         this.type = type;
+    }
+
+    @Override
+    public void display() {
+        System.out.println(Movies.CYAN_BOLD + "Title: " + Movies.RESET + super.getTitle());
+        System.out.println(Movies.CYAN_BOLD + "Type: " + Movies.RESET + getGenre());
+        System.out.println(Movies.CYAN_BOLD + "Year: " + Movies.RESET + super.getYear());
+        System.out.println(Movies.CYAN_BOLD + "Rating: " + Movies.RESET + super.getRating());
+        System.out.println(Movies.CYAN_BOLD + "Runtime: " + Movies.RESET + super.getRuntime());
+        System.out.println(Movies.CYAN_BOLD + "Actions: " + Movies.RESET + super.getActors());
     }
 }

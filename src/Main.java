@@ -77,6 +77,30 @@ public class Main {
         // close scanner
         sc.close();
 
+        // Movie display method
+        System.out.println("\n");
+        System.out.println("New display method to demonstrate overriding. - From Movies.java");
+        Movies singleMovie = new Movies("The Phantom Menace", "1999", "PG", "133", "Liam Neeson");
+        singleMovie.display();
+
+        // Overriding the display method in Genre.java
+        System.out.println("\n");
+        System.out.println("Overriding the display method to output the addition with genre included - From Genre.java");
+        Movies displayMovie = new Genre("The Phantom Menace", "1999", "PG", "133", "Liam Neeson, Natalie Portman, Jake Lloyd", "Action");
+        displayMovie.display();
+        System.out.println("\n\n");
+
+        // Demonstrating Overloading
+        System.out.println("Overloading demonstration");
+        singleMovie.setActor("Sponge Bob");
+        singleMovie.display();
+
+        System.out.println("\n");
+        String[] newActors = {"Liam Neeson, Natalie Portman, Jake Lloyd"};
+        singleMovie.setActor(newActors);
+        singleMovie.display();
+        System.out.println("\n\n");
+
         // Write to CSV
         FileWriter csvWriter = new FileWriter("movies.csv", true);
         csvWriter.append(title);

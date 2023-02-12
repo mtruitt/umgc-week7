@@ -64,8 +64,21 @@ class Movies {
         return actors;
     }
 
-    public void setActors(String actors) {
+    public void setActor(String actors) {
         this.actors = actors;
+    }
+
+    // Method to set multiple actors
+    public void setActor(String[] actors) {
+        this.actors = String.join(", ", actors);
+    }
+
+    public void display() {
+        System.out.println(Movies.CYAN_BOLD + "Title: " + Movies.RESET + getTitle());
+        System.out.println(Movies.CYAN_BOLD + "Year: " + Movies.RESET + getYear());
+        System.out.println(Movies.CYAN_BOLD + "Rating: " + Movies.RESET + getRating());
+        System.out.println(Movies.CYAN_BOLD + "Runtime: " + Movies.RESET + getRuntime());
+        System.out.println(Movies.CYAN_BOLD + "Actions: " + Movies.RESET + getActors());
     }
 
 }
