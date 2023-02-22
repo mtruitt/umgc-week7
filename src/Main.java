@@ -1,8 +1,8 @@
 /**
  *
  * Author: Mark Truitt
- * Class: CMIS 242 - Week 3
- * Date: 2023/01/28
+ * Class: CMIS 242 - Week 6
+ * Date: 2023/02/17
  *
  */
 import java.io.BufferedReader;
@@ -12,7 +12,7 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException, EmptyTitleException {
 
         // create a scanner object for user input
         Scanner sc = new Scanner(System.in);
@@ -83,9 +83,14 @@ public class Main {
         Movies singleMovie = new Movies("The Phantom Menace", "1999", "PG", "133", "Liam Neeson");
         singleMovie.display();
 
-        // Overriding the display method in Genre.java
+        // Setup user-defined exception to check if the title is empty
         System.out.println("\n");
-        System.out.println("Overriding the display method to output the addition with genre included - From Genre.java");
+        System.out.println("Using the Movie setTitle method to force the exception.");
+        singleMovie.setTitle("");
+
+        // Overriding/Dynamic Binding using the display method in Genre.java
+        System.out.println("\n");
+        System.out.println("Overriding/Dynamic Binding the display method to output the addition with genre included - From Genre.java");
         Movies displayMovie = new Genre("The Phantom Menace", "1999", "PG", "133", "Liam Neeson, Natalie Portman, Jake Lloyd", "Action");
         displayMovie.display();
         System.out.println("\n\n");
