@@ -1,8 +1,8 @@
 /**
  *
  * Author: Mark Truitt
- * Class: CMIS 242 - Week 3
- * Date: 2023/01/28
+ * Class: CMIS 242 - Week 6
+ * Date: 2023/02/17
  *
  */
 class Movies {
@@ -32,7 +32,10 @@ class Movies {
         return title;
     }
 
-    public void setTitle(String title) {
+    public void setTitle(String title) throws EmptyTitleException {
+        if (title.isEmpty()) {
+            throw new EmptyTitleException("Title cannot be empty");
+        }
         this.title = title;
     }
 

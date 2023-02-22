@@ -1,8 +1,8 @@
 /**
  *
  * Author: Mark Truitt
- * Class: CMIS 242 - Week 3
- * Date: 2023/01/28
+ * Class: CMIS 242 - Week 6
+ * Date: 2023/02/17
  *
  */
 public class Genre extends Movies {
