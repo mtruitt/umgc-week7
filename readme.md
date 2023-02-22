@@ -1,3 +1,2 @@
-## Week 3 – Creating Class Hierarchy (Inheritance)
-Create a Java class with two subclasses (children). Each class should have at least one attribute and a method. Parent class should have the attribute/method that is common to both children and children should have the 
-attribute/method that is unique to what they represent. Write the main method to demonstrate the correct functionality of the code and to demonstrate that the children inherit from the parent class. 
+## Week 7 – Exceptions
+Use the Java hierarchy you posted in week 5 (corrected based on any feedback you may have received). Add a user-defined exception that can be thrown by one of the methods as part of the validation or error checking. The main method should then create an instance of the class and call the method in such a way that the exception is thrown (e.g. invalid input or state of the system). Submit your program as an attached  .java file and post a screenshot to show that you have been able to successfully run that program.
